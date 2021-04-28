@@ -1,0 +1,16 @@
+<h1>Edit Song</h1>
+<%= form_for(@song) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %></br>
+</br>
+  <%= f.label :artist %></br>
+  <% @artists.each do |artist| %>
+    <p><%= f.radio_button :artist, artist.id, checked: (artist == @song.artist) %><%= artist.name %></p>
+  <% end %>
+</br>
+  <%= f.label :Genre %>
+  <% @genres.each do |genre| %>
+    <p><%= f.radio_button :genre, genre.id, checked: (genre == @song.genre) %><%= genre.name %></p>
+  <% end %>
+  <%= f.submit %>
+<% end %>
