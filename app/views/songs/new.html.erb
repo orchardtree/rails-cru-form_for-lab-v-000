@@ -10,6 +10,8 @@
   <% end %>
 </br>
   <%= f.label :Genre %>
+  <%= f.label :artist_id %></br>
+  <%= f.text_field :artist_id %></br>
   <% @genres.each do |genre| %>
     <p><%= f.radio_button :genre, genre.id %><%= genre.name %></p>
   <% end %>
