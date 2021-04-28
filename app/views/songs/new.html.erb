@@ -9,9 +9,8 @@
     <p><%= f.radio_button :artist, artist.id %><%= artist.name %></p>
   <% end %>
 </br>
-  <%= f.label :Genre %>
-  <%= f.label :artist_id %></br>
-  <%= f.text_field :artist_id %></br>
+  <%= f.label :genre_id %></br>
+  <%= f.text_field :genre_id %></br>
   <% @genres.each do |genre| %>
     <p><%= f.radio_button :genre, genre.id %><%= genre.name %></p>
   <% end %>
