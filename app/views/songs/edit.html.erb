@@ -3,14 +3,17 @@
   <%= f.label :name %>
   <%= f.text_field :name %></br>
 </br>
-  <%= f.label :artist %></br>
+  <%= f.label :artist_id %></br>
+  <%= f.text_field :artist_id %></br>
   <% @artists.each do |artist| %>
-    <p><%= f.radio_button :artist, artist.id, checked: (artist == @song.artist) %><%= artist.name %></p>
+    <p><%= f.radio_button :artist, artist.id %><%= artist.name %></p>
   <% end %>
 </br>
-  <%= f.label :Genre %>
+  <%= f.label :genre_id %></br>
+  <%= f.text_field :genre_id %></br>
   <% @genres.each do |genre| %>
-    <p><%= f.radio_button :genre, genre.id, checked: (genre == @song.genre) %><%= genre.name %></p>
+    <p><%= f.radio_button :genre, genre.id %><%= genre.name %></p>
   <% end %>
   <%= f.submit %>
 <% end %>
+
