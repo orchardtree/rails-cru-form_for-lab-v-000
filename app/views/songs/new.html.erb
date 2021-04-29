@@ -4,13 +4,13 @@
   <%= f.text_field :name %></br>
 </br>
   <%= f.label :artist_id %></br>
-  <%= f.range_field :artist_id, in: 1..100 %></br>
+  <%= f.number_field :artist_id, in: 1..100 %></br>
   <% @artists.each do |artist| %>
     <p><%= f.radio_button :artist, artist.id %><%= artist.name %></p>
   <% end %>
 </br>
   <%= f.label :genre_id %></br>
-  <%= f.range_field :genre_id, in: 1..100 %></br>
+  <%= f.number_field :genre_id, in: 1..100 %></br>
   <% @genres.each do |genre| %>
     <p><%= f.radio_button :genre, genre.id %><%= genre.name %></p>
   <% end %>
