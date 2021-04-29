@@ -12,8 +12,8 @@ class SongsController < ApplicationController
   def create
     binding.pry
     @song = Song.new(params_song(:name))
-    @song.artist = Artist.find(params_song(:artist)["artist"].to_i)
-    @song.genre = Genre.find(params_song(:genre)["genre"].to_i)
+    @song.artist = Artist.find(params_song(:artist_id)["artist_id"].to_i)
+    @song.genre = Genre.find(params_song(:genre_id)["genre_id"].to_i)
     @song.save
     redirect_to song_path(@song)
   end
