@@ -10,7 +10,7 @@ class SongsController < ApplicationController
   end
 
   def create
-    params
+    binding.pry
     @song = Song.new(params_song(:name))
     @song.artist = Artist.find(params_song(:artist)["artist"].to_i)
     @song.genre = Genre.find(params_song(:genre)["genre"].to_i)
